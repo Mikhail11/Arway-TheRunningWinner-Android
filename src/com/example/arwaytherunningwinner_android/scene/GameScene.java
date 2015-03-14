@@ -22,12 +22,11 @@ import org.andengine.extension.tmx.TMXTileProperty;
 import org.andengine.extension.tmx.TMXTiledMap;
 import org.andengine.extension.tmx.util.exception.TMXLoadException;
 import org.andengine.input.touch.TouchEvent;
+import org.andengine.opengl.texture.TextureManager;
 import org.andengine.opengl.texture.TextureOptions;
 import org.andengine.ui.activity.BaseGameActivity;
 import org.andengine.util.Constants;
 import org.andengine.util.debug.Debug;
-
-import android.util.Log;
 
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -38,7 +37,6 @@ import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.Manifold;
-import com.kpfu.arwaytherunningwinner_android.base.BaseScene;
 import com.example.arwaytherunningwinner_android.constants.Action;
 import com.example.arwaytherunningwinner_android.constants.EnemySensors;
 import com.example.arwaytherunningwinner_android.constants.GameConstants;
@@ -48,6 +46,7 @@ import com.example.arwaytherunningwinner_android.dynamics.Player;
 import com.example.arwaytherunningwinner_android.manager.ResourcesManager;
 import com.example.arwaytherunningwinner_android.manager.SceneManager;
 import com.example.arwaytherunningwinner_android.manager.SceneManager.SceneType;
+import com.kpfu.arwaytherunningwinner_android.base.BaseScene;
 
 public class GameScene extends BaseScene {
 
@@ -69,6 +68,7 @@ public class GameScene extends BaseScene {
 	}
 
 	private void loadLevel(int j) {
+		
 		try {
 			TMXLoader tmxLoader = new TMXLoader(
 					ResourcesManager.getInstance().activity.getAssets(),
@@ -80,8 +80,8 @@ public class GameScene extends BaseScene {
 								final TMXTiledMap pTMXTiledMap,
 								final TMXLayer pTMXLayer,
 								final TMXTile pTMXTile,
-								final TMXProperties<TMXTileProperty> pTMXTileProperties){
-							
+								final TMXProperties<TMXTileProperty> pTMXTileProperties) {
+
 						}
 					});
 
