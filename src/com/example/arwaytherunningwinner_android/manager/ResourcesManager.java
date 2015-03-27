@@ -116,7 +116,7 @@ public class ResourcesManager {
 				activity.getTextureManager(), 2000, 2000,
 				TextureOptions.BILINEAR);
 		menu_background_region = BitmapTextureAtlasTextureRegionFactory
-				.createFromAsset(menuTextureAtlas, activity, "mariomenubg.png");
+				.createFromAsset(menuTextureAtlas, activity, "arwaymenubg.png");
 		play_region = BitmapTextureAtlasTextureRegionFactory.createFromAsset(
 				menuTextureAtlas, activity, "play.png");
 
